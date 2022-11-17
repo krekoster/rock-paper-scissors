@@ -33,7 +33,7 @@ function playRound (playerSelection, computerSelection) {
     }
     else if (playerSelection == "scissors" && computerSelection == "paper"){
         humanScore +=1;
-        return ("point for you, sissors beats paper");
+        return ("point for you, scissors beats paper");
     }
     else if (playerSelection == "scissors" && computerSelection == "rock"){
         computerScore += 1;
@@ -46,11 +46,15 @@ function playRound (playerSelection, computerSelection) {
 
 function game () {
     for (let i = 0; i < 5; i++ ) {
-        let playerSelection =  prompt("Choose rock, paper or scissors!");
+        const playerSelection =  prompt("Choose rock, paper or scissors!");
         const computerSelection = getComputerChoice();
         playRound(playerSelection,computerSelection);
-        console.log ("computerScore je", computerScore);
-        console.log ("humanScore je", humanScore);
+        //console.log ("computerScore je", computerScore);
+        //console.log ("humanScore je", humanScore);
     }
 }
 game ();
+console.log ("computer Score is", computerScore);
+console.log ("human Score is", humanScore);
+if (computerScore > humanScore) {console.log ("computer wins")}
+else { console.log ("Human wins")};
