@@ -1,0 +1,38 @@
+body {
+    margin: 0px;
+    background-color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+   
+    
+}
+
+#header {
+    text-align: center;
+    flex: 0 0 auto;
+    background-color: rgba(149, 158, 165, 0.137);
+}
+
+#content {
+    
+    
+}
+
+#footer {
+    height: 50px;
+    text-align: center; 
+    
+    flex:0 0 auto;
+    background-color: rgba(53, 75, 94, 0.253);   
+}
+
+hr {
+    width: 80%;
+}
+#footerText {
+
+margin: 10px;
+}
