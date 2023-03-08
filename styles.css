@@ -1,38 +1,192 @@
+:root {
+    --mainBgColor: #f9dbbb;
+    --lightColor: #4e6e81;
+    --darkColor: #2e3840;
+    --alertColor: #ff0303;
+    --workingColor: #f9dbbb;
+}
+
 body {
     margin: 0px;
-    background-color: aliceblue;
+    background-color: var(--mainBgColor);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-   
+    font-size: 18px;
     
-}
 
+}
 #header {
     text-align: center;
-    flex: 0 0 auto;
-    background-color: rgba(149, 158, 165, 0.137);
+    flex: 0 1 auto;
+    background-color: var(--lightColor);
+    margin: 0px;
 }
+#popUpWindow {
+    display: none;
+    position:fixed;
+    top: 35%;
+    left: 25vw;
+    width: 50vw;
+    height: 55%;
+    box-shadow: 5px 5px 15px var(--darkColor);
+    border-radius: 5%;
+    background-color: var(--lightColor);
+    z-index: 9;
+    }
+    #popUpWindow > h1 {
+        
+        display: block;
+        margin-left: auto;
+        margin-left: auto;
+        margin-top: 2.5em;
+        text-align: center;
+    }
 
+#popupButtonHolder {
+    display: block;
+        margin-left: auto;
+        margin-left: auto;
+        margin-top: 3em;
+        text-align: center;
+        height: 5em;
+}
+.popupButtons {
+    background-color: var(--mainBgColor);
+    width: 150px;
+    height: 100px;
+    margin: 2em;
+    font-size: 38px;
+    box-shadow: 5px 5px 15px var(--darkColor);
+    border-radius: 5%;
+    border: #2e3840;
+}
 #content {
+    margin: 0px;
     
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    flex: 0 1 auto;
+    min-height: 70vh; 
     
+
+}
+#buttonsHolder,    body, #content, #status, #scoreTable  {
+    transition: background-color 2s; 
+}
+#main {
+    margin: 10px;
+    width:45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-content: center;
+    align-items: center;
+    flex: 0 1 auto;
+    flex-wrap: nowrap;
+    transition: background-color 3s;
+}
+#status {
+background-color: var(--workingColor);
+margin: 10px;
+margin-bottom: 4em;
+border-bottom: 2px solid var(--darkColor);
+
+}
+#buttonsHolder {
+    margin: 10px;
+    background-color: var(--workingColor);
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    flex: 0.3 0.5 70%vw;
+}
+#humanButtons {
+    display: flex;
+    flex-direction:row;
+    margin-right: 30px;
+}
+#computerButtons {
+    display: flex;
+    flex-direction:row;
+    margin-left: 30px;
+}
+#compButtonRock, #compButtonPaper, #compButtonScissors {
+    opacity: 0.3;
+}
+#scoreTable {
+    
+    display: flex;
+    margin: 10px;
+    margin-bottom: 0px;
+    background-color: var(--workingColor);
+    flex: 0 1 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+#whoIsWho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50vw;
+    flex: 0 1 auto;
+}
+#scoreText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 1 auto;
+    width: 30%;
+}
+#scoreText > h3 {
+    margin-bottom: 5px;
+}
+#scoreText > hr {
+    margin-top: 0%;
+    height: 2px solid var(--lightColor);
+    background-color: #4e6e81;
 }
 
+#result {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
+    align-content: flex-start;
+    margin: -10px 0 -10px 0px;
+}
+.button {
+    display: flex;
+    flex: 0 1 auto;
+    margin: 10px;
+}
+img {
+    width: 100%;
+}
 #footer {
     height: 50px;
     text-align: center; 
-    
-    flex:0 0 auto;
-    background-color: rgba(53, 75, 94, 0.253);   
+    flex: 0 0 auto;
+    background-color: var(--lightColor);
+    margin: 0px;
 }
-
 hr {
     width: 80%;
+    color: var(--darkColor);
+    background-color: #2e3840;
+}
+#status, #scoreTable {
+    color: var(--darkColor);
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #footerText {
-
 margin: 10px;
 }
